@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Importing Dark Grotesque font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap">
+    
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif; /* Dark Grotesque font */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 32px;
+            align-items: center;
+            min-height: 10rem;
+            background-color: #004494; /* Navbar background color */
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            background-color: #e9efff;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 400px; /* Increased logo size */
+            margin: 20px 0;
+        }
+
+        .tagline {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        .quirky-tagline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #004494; /* Dark blue background */
+            color: white;
+            min-height: 50vh;
+            padding: 40px 20px; /* Ample padding */
+            text-align: center;
+        }
+
+        .quirky-tagline p {
+            font-size: 1.8rem; /* Increased font size */
+            margin: 0;
+        }
+
+        .quirky-tagline p strong {
+            font-weight: bold; /* Bold impactful words */
+        }
+
+        .services {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            justify-content: center; /* Center align the services */
+        }
+
+        .technologies {
+            max-width: 80%;
+            min-height: 60vh;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            flex-direction: column;
+            justify-content: center; /* Center align the services */
+        }
+
+        .services h2, .technologies h2, .contact h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            width: 100%; /* Ensure heading takes full width */
+        }
+
+        .technologies h2 {
+            margin-bottom: 80px;
+        }
+
+        .contact h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .service {
+            display: flex;
+            align-items: center;
+            padding: 30px; /* Ample padding in each box */
+            border-radius: 8px;
+            margin: 20px;
+            background-color: #e9efff; /* Light background */
+            width: calc(33.33% - 40px); /* Responsive sizing for 3 in a row */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .technology {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(25% - 50px);
+        }
+
+        .service {
+            width: calc(30.33% - 50px); /* Responsive sizing for 3 in a row */
+            margin: 30px 16px;
+        }
+
+        .service-description, .technology-description {
+            max-width: 100%; /* Full width for description */
+        }
+
+        .service-description h3, .technology-description h3 {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .service-description ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            list-style-type: circle;
+            margin-left: 20px;
+            padding-left: 0;
+            font-size: 1.2rem; /* Increased font size for descriptions */
+        }
+
+        .technology-logo {
+            width: 160px; /* Adjust logo size */
+            height: 60px; /* Adjust logo size */
+            object-fit: contain;
+            margin: 0 10px; /* Spacing between logos */
+        }
+
+        footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .contact {
+            background-color: #f6f8ff; /* Light grey background */
+            text-align: center; /* Center align contact section */
+            padding: 40px 20px; /* Ample padding */
+        }
+
+        .contact-email {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 80%;
+            }
+
+            .tagline {
+                font-size: 1.8rem;
+            }
+
+            .services h2, .technologies h2, .contact h2 {
+                font-size: 1.5rem;
+            }
+
+            .service, .technology {
+                width: calc(50% - 40px); /* Two in a row on medium screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tagline {
+                font-size: 1.5rem;
+            }
+
+            .services h2, .technologies h2, .contact h2 {
+                font-size: 1.2rem;
+            }
+
+            .service, .technology {
+                width: 100%; /* Stack on small screens */
+            }
+        }
+    </style>
+    
+    <title>Credible Tools</title>
+</head>
+<body>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header class="hero">
+        <img src="./logo.png" alt="Credible Tools Logo" class="logo">
+        <h1 class="tagline">Credible Solutions for Incredible Results.</h1>
+    </header>
+
+    <section class="quirky-tagline">
+        <p><strong>Empowering</strong> your tech journey is our mission.</p>
+        <p>Your <strong>trusted partner</strong> in navigating the digital landscape.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Services</h2>
+
+        <div class="service">
+            <div class="service-description">
+                <h3>Web Application Development</h3>
+                <ul>
+                    <li>Custom web solutions tailored to your needs.</li>
+                    <li>Responsive and user-friendly designs.</li>
+                    <li>Integration with existing systems.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-description">
+                <h3>Infrastructure Setup</h3>
+                <ul>
+                    <li>Comprehensive IT infrastructure assessments.</li>
+                    <li>Setup and configuration of networks.</li>
+                    <li>Cloud solutions for scalability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-description">
+                <h3>Architecture Consultancy</h3>
+                <ul>
+                    <li>Expert guidance on system architecture.</li>
+                    <li>Best practices for performance optimization.</li>
+                    <li>Risk assessment and mitigation strategies.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies" class="technologies">
+        <h2>Technologies</h2>
+
+        <div class="content">
+            <div class="technology">
+                <img src="./react.png" alt="ReactJS Logo" class="technology-logo">
+            </div>
+            
+            <div class="technology">
+                <img src="./ts.png" alt="TypeScript Logo" class="technology-logo">
+            </div>
+
+            <div class="technology">
+                <img src="./django.png" alt="Django Logo" class="technology-logo">
+            </div>
+
+            <div class="technology">
+                <img src="./azure.png" alt="Azure Logo" class="technology-logo">
+            </div>
+
+            <div class="technology">
+                <img src="./aws.svg" alt="AWS Logo" class="technology-logo">
+            </div>
+
+            <div class="technology">
+                <img src="./docker.png" alt="Docker Logo" class="technology-logo">
+            </div>
+
+            <div class="technology">
+                <img src="./kubernetes.svg" alt="Kubernetes Logo" class="technology-logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you.</p>
+        <div class="contact-email">admin@credibletools.org</div>
+    </section>
+
+    <footer>
+        <p>© 2024 Credible Tools. All rights reserved.</p>
+    </footer>
+</body>
+</html>
